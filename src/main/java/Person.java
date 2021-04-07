@@ -55,9 +55,16 @@ public class Person {
         return now.compareTo(this.birthday);
     }
 
-    public void printPerson(){
-        System.out.println("Person`s name:"+this.getName()+" , birthday:"+this.getBirthday()
-        +" , gender:"+this.getGender()+" ,email address: "+this.getEmailAddress());
+    public boolean printPerson(){
+//        System.out.println("Person`s name:"+this.getName()+" , birthday:"+this.getBirthday()
+//        +" , gender:"+this.getGender()+" ,email address: "+this.getEmailAddress());
+//        return false;
+        if (getAge() > 10 && gender == Person.Sex.FEMALE) {
+            return true;
+        }
+        return false;
+
+
     }
 
     public void printPersonsOlderThan(List<Person> roster, int age){
@@ -66,6 +73,7 @@ public class Person {
                 p.printPerson();
             }
         }
+
 }
 
 
